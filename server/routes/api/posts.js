@@ -33,7 +33,7 @@ router.delete('/:id', async(req, res) => {
 
 
 async function loadPostsCollection(){
-    const client = await mongodb.MongoClient.connect('mongodb+srv://goyalpayas2000:TPQE83jJ2sDu7kwv@cluster0.waoaghy.mongodb.net/test', {
+    const client = await mongodb.MongoClient.connect(process.env.MONGODB_URI || 'mongodb+srv://goyalpayas2000:TPQE83jJ2sDu7kwv@cluster0.waoaghy.mongodb.net/test', {
         useNewUrlParser: true
     });
 
